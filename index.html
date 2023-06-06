@@ -10,9 +10,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        
-    </main>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <div id="app">
+        <header>
+            <h1>
+                MandoVue Slider
+            </h1>
+        </header>
+
+        <div class="wrapper">
+            <div class="slide">
+                <img :src="images[activeIndex].image" alt="Mandalorian picture">
+                <h2>
+                    {{ images[activeIndex].title }}
+                </h2>
+                
+                <p>
+                    {{ images[activeIndex].text }} 
+                </p>
+
+                <div class="slider-button prev" @click="previousSlide()">
+                    <i class="fa-solid fa-circle-chevron-left"></i>
+                </div>
+                <div class="slider-button next" @click="nextSlide()">
+                    <i class="fa-solid fa-circle-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
