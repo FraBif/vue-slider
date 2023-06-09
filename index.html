@@ -20,7 +20,7 @@
         </header>
 
         <div class="wrapper">
-            <div class="slide">
+            <div class="slide" v-for = "(image, title, text) in images" >
                 <img :src="images[activeIndex].image" alt="Mandalorian picture">
                 <h2>
                     {{ images[activeIndex].title }}
